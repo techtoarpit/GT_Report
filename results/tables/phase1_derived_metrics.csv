@@ -1,0 +1,19 @@
+Metric,Value
+Paired KernelSHAP relative error at m=2048,0.00759
+Paired KernelSHAP % reduction vs KernelSHAP (m=2048),62.59%
+Paired KernelSHAP % reduction vs Permutation (m=2048),62.83%
+Matching budget where Paired KS equals Permutation at m=2048,320.7
+Speedup factor of Paired KS over Permutation (m=2048),6.39x
+Exact evaluations (coalitions),4096
+Exact forward passes (coalitions x 100 bg),409600
+Measured total exact seconds per instance,1.315 s
+Log-log slope: Permutation,-0.535
+Log-log slope: Antithetic Permutation,-0.542
+Log-log slope: KernelSHAP,-0.523
+Log-log slope: Paired KernelSHAP,-0.563
+Log-log slope: Multilinear Extension,-0.562
+Smallest budget for top3 >= 0.99: Permutation,not reached
+Smallest budget for top3 >= 0.99: Antithetic Permutation,2048
+Smallest budget for top3 >= 0.99: KernelSHAP,not reached
+Smallest budget for top3 >= 0.99: Paired KernelSHAP,1024
+Smallest budget for top3 >= 0.99: Multilinear Extension,not reached
