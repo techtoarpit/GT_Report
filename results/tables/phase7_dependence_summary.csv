@@ -1,0 +1,10 @@
+metric,value
+number of feature pairs,66.0
+mean |r|,0.779678160822559
+median |r|,0.7536435817579519
+max |r|,0.9980325957602257
+fraction of pairs with |r| > 0.7,0.7424242424242424
+fraction of pairs with |r| > 0.9,0.2727272727272727
+max VIF,1846.2978429328457
+median VIF,135.15341352873838
+condition number of correlation matrix,35082.489296561704
