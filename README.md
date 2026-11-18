@@ -68,7 +68,7 @@ The study is a four-stage pipeline. The same diagram appears as Fig. 1 of the pa
 | Phase | Description | Outputs |
 | :--- | :--- | :--- |
 | Sanity checks | Efficiency to within $10^{-11}$, exact recovery on an additive toy game for all five estimators, hand-checked three-player game | `results/tables/sanity_checks.csv` |
-| 1. Main benchmark | $d=12$, 10 explicands, 20 seeds, budgets 64 to 2048 | Table II, top-3 table, Figure 1 |
+| 1. Main benchmark | $d=12$, 10 explicands, 20 seeds, budgets 64 to 2048 | `table2_main_benchmark.csv`, `top3_agreement.csv`, Figure 1 |
 | 2. Cost of exactness | Wall-clock time for $d \in \{6,\dots,16\}$, exponential fit, extrapolation to $d=20,30,50$ | Figure 2 |
 | 3. Scale to $d=16$ | 65,536 coalitions, 5 explicands, 10 seeds, budgets up to 8192 | Figure 3 |
 | 4. Multilinear grid ablation | $K \in \{4,8,16,32\}$ | Figure 4 |
@@ -105,15 +105,9 @@ python run_extension.py --full               # phases 7-10, about 12 minutes
 python run_extension.py --full --phases 10   # a subset of the extension phases
 ```
 
+Figures are written to `results/figures/`. The copies in `paper/figures/` are the PDF versions used by the paper.
+
 `run_extension.py` rebuilds the model first and checks that the test accuracy (0.93567) and $v(N)$ of explicand 0 (-2.025251) match the stored run. It stops if they do not. It reuses the Phase 1 raw runs and does not recompute phases 1-6.
-
-### Demonstration notebook
-
-`notebooks/Shapley_Mid_Sem_Demo.ipynb`, built by `make_notebook.py`, loads the stored tables and figures of the sanity checks and phases 1-6 without recomputation.
-
-```bash
-jupyter notebook notebooks/Shapley_Mid_Sem_Demo.ipynb
-```
 
 ### Building the paper
 
@@ -143,7 +137,6 @@ GT_Report/
 ├── README.md
 ├── run_all.py                  # Sanity checks and phases 1-6 (--quick, --full)
 ├── run_extension.py            # Phases 7-10 (--quick, --full, --phases)
-├── make_notebook.py            # Builds the demonstration notebook
 ├── paper/
 │   ├── main.tex                # IEEEtran conference paper
 │   ├── main.pdf                # Compiled paper (11 pages)
@@ -155,22 +148,13 @@ GT_Report/
 │   ├── exact.py                # Exact Shapley values and efficiency check
 │   ├── estimators.py           # The five estimators
 │   ├── metrics.py              # Relative error, top-3 agreement, efficiency gap
-│   ├── sanity_checks.py        # Correctness tests
+│   ├── sanity_checks.py        # Correctness checks
 │   └── phases/                 # phase1.py ... phase10.py
-├── notebooks/
-│   └── Shapley_Mid_Sem_Demo.ipynb
-├── results/
-│   ├── ASSUMPTIONS.md          # Methodological choices
-│   ├── RUN_INFO.json           # Machine, library versions, phase runtimes
-│   ├── CHANGELOG.md            # Corrections and experiment log
-│   ├── RESULTS_SUMMARY.md      # Summary of phases 1-6
-│   ├── MID_SEM_TALKING_POINTS.md
-│   ├── EXTENSION_SUMMARY.md    # Findings of phases 7-10
-│   ├── raw/                    # Raw per-run CSV files
-│   ├── tables/                 # All tables (CSV, JSON)
-│   └── figures/                # Figures (PNG and PDF)
-├── shapley_results/            # Archived snapshot of the phase 1-6 outputs
-└── shapley_results.zip         # Archive of the same snapshot
+└── results/
+    ├── ASSUMPTIONS.md          # Methodological choices
+    ├── RUN_INFO.json           # Machine, library versions, phase runtimes (phases 1-6)
+    ├── RUN_INFO_extension.json # Runtimes of phases 7-10
+    ├── raw/                    # Raw per-run CSV files
+    ├── tables/                 # All result tables (CSV)
+    └── figures/                # Figures (PNG)
 ```
-
-`results/` holds the final outputs of all phases. `shapley_results/` and `shapley_results.zip` are an earlier snapshot of the phase 1-6 outputs, kept for reference.
