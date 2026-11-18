@@ -1,0 +1,27 @@
+{
+  "mode": "FULL",
+  "system": {
+    "platform": "Windows-11-10.0.26300-SP0",
+    "processor": "AMD64 Family 25 Model 68 Stepping 1, AuthenticAMD",
+    "cpu_count_logical": 16,
+    "python_version": "3.12.7 | packaged by Anaconda, Inc. | (main, Oct  4 2024, 13:17:27) [MSC v.1929 64 bit (AMD64)]",
+    "packages": {
+      "numpy": "1.26.4",
+      "scipy": "1.16.2",
+      "pandas": "2.3.3",
+      "scikit-learn": "1.7.2",
+      "matplotlib": "3.9.2"
+    }
+  },
+  "phase_runtimes_seconds": {
+    "sanity_checks": 1.7401611804962158,
+    "phase1": 56.31076097488403,
+    "phase2": 27.113665103912354,
+    "phase3": 141.24422335624695,
+    "phase4": 8.617183923721313,
+    "phase5": 2.3612751960754395,
+    "phase6": 0.03185081481933594
+  },
+  "total_runtime_seconds": 237.46513175964355,
+  "timestamp_completed": "2026-10-14T21:54:53+0530"
+}
