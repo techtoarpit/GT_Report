@@ -1,0 +1,9 @@
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+paper/main.log
+paper/main.blg
+paper/main.aux
+paper/main.bbl
+paper/main.out
+paper/main.xdv
