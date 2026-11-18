@@ -1,0 +1,16 @@
+{
+  "mode": "FULL",
+  "runtimes_seconds": {
+    "phase10": 422.27438473701477
+  },
+  "total_runtime_seconds": 451.2255480289459,
+  "timestamp_completed": "2026-11-16T15:23:22+0530",
+  "environment": {
+    "python": "3.12.7",
+    "numpy": "1.26.4",
+    "scipy": "1.16.2",
+    "pandas": "2.3.3",
+    "scikit-learn": "1.7.2",
+    "matplotlib": "3.9.2"
+  }
+}

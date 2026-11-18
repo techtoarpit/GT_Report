@@ -1,0 +1,65 @@
+  File "C:\ProgramData\anaconda3\Lib\site-packages\joblib\externals\loky\backend\context.py", line 257, in _count_physical_cores
+    cpu_info = subprocess.run(
+               ^^^^^^^^^^^^^^^
+  File "C:\ProgramData\anaconda3\Lib\subprocess.py", line 548, in run
+    with Popen(*popenargs, **kwargs) as process:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ProgramData\anaconda3\Lib\subprocess.py", line 1026, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "C:\ProgramData\anaconda3\Lib\subprocess.py", line 1538, in _execute_child
+    hp, ht, pid, tid = _winapi.CreateProcess(executable, args,
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Reproducibility check: accuracy=0.93567 (ref 0.93567), v(N)[0]=-2.025251 (ref -2.025251)
+
+--- Running Phase 10 (multilinear bias/variance, R=100, K=[4, 8, 32]) ---
+  explicand 1/10 done (64 s elapsed)
+  explicand 2/10 done (121 s elapsed)
+  explicand 3/10 done (169 s elapsed)
+  explicand 4/10 done (200 s elapsed)
+  explicand 5/10 done (231 s elapsed)
+  explicand 6/10 done (261 s elapsed)
+  explicand 7/10 done (311 s elapsed)
+  explicand 8/10 done (355 s elapsed)
+  explicand 9/10 done (388 s elapsed)
+  explicand 10/10 done (420 s elapsed)
+        estimator  budget  single_run_rel_err_mean  single_run_rel_err_se  bias_rel_mean  bias_rel_se  noise_rel_mean  noise_rel_se  bias_noise_floor_mean  bias_noise_floor_se  eff_gap_single_run_mean  eff_gap_single_run_se  eff_gap_of_mean_mean  eff_gap_of_mean_se
+ Multilinear K=32     512                  0.03404                0.00208        0.00333      0.00042         0.03527       0.00215                0.00353              0.00022                  0.22719                0.00987               0.01738             0.00294
+ Multilinear K=32    1024                  0.02272                0.00136        0.00292      0.00035         0.02357       0.00146                0.00236              0.00015                  0.14648                0.00773               0.01819             0.00511
+ Multilinear K=32    2048                  0.01583                0.00099        0.00182      0.00027         0.01644       0.00103                0.00164              0.00010                  0.10583                0.00419               0.01235             0.00239
+ Multilinear K=32    4096                  0.01120                0.00070        0.00115      0.00014         0.01163       0.00072                0.00116              0.00007                  0.07558                0.00371               0.01003             0.00189
+ Multilinear K=32    8192                  0.00788                0.00050        0.00084      0.00009         0.00821       0.00052                0.00082              0.00005                  0.05154                0.00255               0.00577             0.00102
+  Multilinear K=4     512                  0.02695                0.00181        0.00918      0.00104         0.02652       0.00173                0.00265              0.00017                  0.18301                0.01018               0.07521             0.01570
+  Multilinear K=4    1024                  0.01938                0.00126        0.00874      0.00096         0.01802       0.00106                0.00180              0.00011                  0.13361                0.00850               0.07755             0.01509
+  Multilinear K=4    2048                  0.01523                0.00113        0.00893      0.00107         0.01282       0.00087                0.00128              0.00009                  0.10825                0.00986               0.07797             0.01527
+  Multilinear K=4    4096                  0.01231                0.00101        0.00879      0.00105         0.00895       0.00058                0.00089              0.00006                  0.09264                0.01110               0.07560             0.01541
+  Multilinear K=4    8192                  0.01077                0.00098        0.00893      0.00101         0.00625       0.00039                0.00062              0.00004                  0.08408                0.01279               0.07809             0.01494
+  Multilinear K=8     512                  0.03025                0.00192        0.00356      0.00044         0.03135       0.00196                0.00314              0.00020                  0.20638                0.01039               0.02277             0.00709
+  Multilinear K=8    1024                  0.02084                0.00124        0.00281      0.00017         0.02156       0.00128                0.00216              0.00013                  0.13716                0.00727               0.01464             0.00423
+  Multilinear K=8    2048                  0.01476                0.00091        0.00240      0.00026         0.01519       0.00093                0.00152              0.00009                  0.09750                0.00412               0.02102             0.00336
+  Multilinear K=8    4096                  0.01037                0.00060        0.00174      0.00020         0.01067       0.00062                0.00107              0.00006                  0.07004                0.00342               0.01229             0.00310
+  Multilinear K=8    8192                  0.00748                0.00047        0.00175      0.00019         0.00763       0.00046                0.00076              0.00005                  0.05134                0.00260               0.01139             0.00335
+Paired KernelSHAP     512                  0.01530                0.00143        0.00152      0.00020         0.01561       0.00146                0.00156              0.00015                  0.00000                0.00000               0.00000             0.00000
+Paired KernelSHAP    1024                  0.01073                0.00100        0.00110      0.00014         0.01094       0.00102                0.00109              0.00010                  0.00000                0.00000               0.00000             0.00000
+Paired KernelSHAP    2048                  0.00756                0.00072        0.00081      0.00013         0.00771       0.00074                0.00077              0.00007                  0.00000                0.00000               0.00000             0.00000
+Paired KernelSHAP    4096                  0.00535                0.00052        0.00054      0.00007         0.00546       0.00053                0.00055              0.00005                  0.00000                0.00000               0.00000             0.00000
+Paired KernelSHAP    8192                  0.00379                0.00037        0.00037      0.00004         0.00386       0.00038                0.00039              0.00004                  0.00000                0.00000               0.00000             0.00000
+        estimator           quantity  loglog_slope
+ Multilinear K=32 eff_gap_single_run        -0.523
+ Multilinear K=32         eff_gap_of        -0.404
+ Multilinear K=32          noise_rel        -0.523
+ Multilinear K=32           bias_rel        -0.532
+  Multilinear K=4 eff_gap_single_run        -0.277
+  Multilinear K=4         eff_gap_of         0.007
+  Multilinear K=4          noise_rel        -0.518
+  Multilinear K=4           bias_rel        -0.007
+  Multilinear K=8 eff_gap_single_run        -0.498
+  Multilinear K=8         eff_gap_of        -0.225
+  Multilinear K=8          noise_rel        -0.509
+  Multilinear K=8           bias_rel        -0.275
+Paired KernelSHAP eff_gap_single_run        -0.000
+Paired KernelSHAP         eff_gap_of        -0.000
+Paired KernelSHAP          noise_rel        -0.503
+Paired KernelSHAP           bias_rel        -0.508
+Phase 10 complete in 422.27 s
+
+Extension phases finished in 451.2 s -> results/RUN_INFO_extension_phases10.json

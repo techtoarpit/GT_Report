@@ -1,0 +1,100 @@
+  File "C:\ProgramData\anaconda3\Lib\site-packages\joblib\externals\loky\backend\context.py", line 257, in _count_physical_cores
+    cpu_info = subprocess.run(
+               ^^^^^^^^^^^^^^^
+  File "C:\ProgramData\anaconda3\Lib\subprocess.py", line 548, in run
+    with Popen(*popenargs, **kwargs) as process:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ProgramData\anaconda3\Lib\subprocess.py", line 1026, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "C:\ProgramData\anaconda3\Lib\subprocess.py", line 1538, in _execute_child
+    hp, ht, pid, tid = _winapi.CreateProcess(executable, args,
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Reproducibility check: accuracy=0.93567 (ref 0.93567), v(N)[0]=-2.025251 (ref -2.025251)
+
+--- Running Phase 7 (feature dependence audit, d=12) ---
+                                metric        value
+               number of feature pairs    66.000000
+                              mean |r|     0.779678
+                            median |r|     0.753644
+                               max |r|     0.998033
+      fraction of pairs with |r| > 0.7     0.742424
+      fraction of pairs with |r| > 0.9     0.272727
+                               max VIF  1846.297843
+                            median VIF   135.153414
+condition number of correlation matrix 35082.489297
+Phase 7 complete in 2.50 s
+
+--- Running Phase 8 (value-function sensitivity, 10 explicands, B in [10, 25, 50, 100, 200], 5 draws each) ---
+  explicand 1/10 done (25 s elapsed)
+  explicand 2/10 done (55 s elapsed)
+  explicand 3/10 done (94 s elapsed)
+  explicand 4/10 done (134 s elapsed)
+  explicand 5/10 done (167 s elapsed)
+  explicand 6/10 done (191 s elapsed)
+  explicand 7/10 done (216 s elapsed)
+  explicand 8/10 done (240 s elapsed)
+  explicand 9/10 done (263 s elapsed)
+  explicand 10/10 done (288 s elapsed)
+      setting   B  shift_mean  shift_se  top3_mean  top3_se
+mean baseline   1    0.782624  0.081042   0.700000 0.059835
+         B=10  10    0.282715  0.021486   0.813333 0.040734
+         B=25  25    0.134423  0.011170   0.946667 0.029481
+         B=50  50    0.180841  0.016266   0.840000 0.047868
+        B=100 100    0.156476  0.010340   0.926667 0.023201
+        B=200 200    0.139866  0.009539   0.933333 0.029814
+Phase 8 complete in 289.24 s
+
+--- Running Phase 9 (uncertainty reporting, R=10 replicates) ---
+             estimator  budget  coverage_mean  coverage_se  halfwidth_rel  mean_abs_z  replicate_mean_rel_err
+Antithetic Permutation      64       0.950000     0.018426       0.053807    0.802353                0.017725
+Antithetic Permutation     128       0.983333     0.016667       0.040218    0.813388                0.013527
+Antithetic Permutation     256       0.916667     0.021517       0.026036    0.973059                0.010601
+Antithetic Permutation     512       0.950000     0.018426       0.017831    0.957028                0.007514
+Antithetic Permutation    1024       0.941667     0.027916       0.012203    0.965256                0.005040
+Antithetic Permutation    2048       0.958333     0.018634       0.008392    0.819078                0.002980
+     Paired KernelSHAP      64       0.925000     0.033907       0.046961    0.907685                0.016734
+     Paired KernelSHAP     128       0.933333     0.024216       0.030068    0.962866                0.011770
+     Paired KernelSHAP     256       0.933333     0.029918       0.020385    0.982960                0.008085
+     Paired KernelSHAP     512       0.933333     0.029918       0.014571    0.947582                0.005152
+     Paired KernelSHAP    1024       0.933333     0.020787       0.009911    0.844822                0.003199
+     Paired KernelSHAP    2048       0.925000     0.023074       0.006877    0.905790                0.002528
+           Permutation      64       0.966667     0.018426       0.112959    0.749166                0.038705
+           Permutation     128       0.941667     0.027916       0.072307    0.989630                0.030871
+           Permutation     256       0.925000     0.029001       0.047876    1.021492                0.021179
+           Permutation     512       0.941667     0.035246       0.031353    0.892287                0.012257
+           Permutation    1024       0.933333     0.029918       0.023705    0.904095                0.009288
+           Permutation    2048       0.933333     0.020787       0.016917    0.919746                0.006750
+             estimator  budget  p_top3_perfect  p_err_over_5pct_given_perfect  median_err_given_perfect  p_err_over_5pct_all
+Antithetic Permutation      64           0.815                       0.631902                  0.056466                0.690
+Antithetic Permutation     128           0.870                       0.327586                  0.041893                0.385
+Antithetic Permutation     256           0.845                       0.106509                  0.027525                0.100
+Antithetic Permutation     512           0.915                       0.000000                  0.018453                0.000
+Antithetic Permutation    1024           0.960                       0.000000                  0.013578                0.000
+Antithetic Permutation    2048           0.990                       0.000000                  0.009800                0.000
+            KernelSHAP      64           0.685                       0.985401                  0.117848                0.990
+            KernelSHAP     128           0.810                       0.888889                  0.078282                0.900
+            KernelSHAP     256           0.840                       0.607143                  0.054259                0.580
+            KernelSHAP     512           0.865                       0.202312                  0.039354                0.190
+            KernelSHAP    1024           0.945                       0.031746                  0.026414                0.030
+            KernelSHAP    2048           0.965                       0.005181                  0.018408                0.005
+ Multilinear Extension      64           0.710                       0.978873                  0.097865                0.985
+ Multilinear Extension     128           0.805                       0.639752                  0.054605                0.665
+ Multilinear Extension     256           0.855                       0.140351                  0.034085                0.165
+ Multilinear Extension     512           0.865                       0.017341                  0.023949                0.030
+ Multilinear Extension    1024           0.925                       0.005405                  0.017998                0.005
+ Multilinear Extension    2048           0.940                       0.000000                  0.013746                0.000
+     Paired KernelSHAP      64           0.830                       0.445783                  0.048109                0.525
+     Paired KernelSHAP     128           0.865                       0.086705                  0.030959                0.105
+     Paired KernelSHAP     256           0.915                       0.000000                  0.021387                0.005
+     Paired KernelSHAP     512           0.940                       0.000000                  0.015199                0.000
+     Paired KernelSHAP    1024           0.985                       0.000000                  0.010681                0.000
+     Paired KernelSHAP    2048           1.000                       0.000000                  0.007650                0.000
+           Permutation      64           0.585                       1.000000                  0.120194                1.000
+           Permutation     128           0.745                       0.885906                  0.082946                0.910
+           Permutation     256           0.840                       0.601190                  0.054358                0.645
+           Permutation     512           0.850                       0.217647                  0.037741                0.235
+           Permutation    1024           0.900                       0.055556                  0.025597                0.050
+           Permutation    2048           0.930                       0.005376                  0.018461                0.005
+Phase 9 complete in 8.14 s
+
+Extension phases finished in 314.6 s -> results/RUN_INFO_extension.json

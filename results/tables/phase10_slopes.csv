@@ -1,0 +1,17 @@
+estimator,quantity,loglog_slope
+Multilinear K=32,eff_gap_single_run,-0.5234788773432562
+Multilinear K=32,eff_gap_of,-0.40389487092450205
+Multilinear K=32,noise_rel,-0.5226223135809392
+Multilinear K=32,bias_rel,-0.5323542470993198
+Multilinear K=4,eff_gap_single_run,-0.27725367858179367
+Multilinear K=4,eff_gap_of,0.007173200019721521
+Multilinear K=4,noise_rel,-0.5182296751354919
+Multilinear K=4,bias_rel,-0.007257884502769894
+Multilinear K=8,eff_gap_single_run,-0.49839438198990316
+Multilinear K=8,eff_gap_of,-0.2251807861901535
+Multilinear K=8,noise_rel,-0.5090535747298339
+Multilinear K=8,bias_rel,-0.27475670358534215
+Paired KernelSHAP,eff_gap_single_run,-3.904435979941391e-15
+Paired KernelSHAP,eff_gap_of,-3.904435979941391e-15
+Paired KernelSHAP,noise_rel,-0.5034694350237847
+Paired KernelSHAP,bias_rel,-0.5078872183738832
